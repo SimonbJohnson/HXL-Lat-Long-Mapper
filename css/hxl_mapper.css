@@ -1,0 +1,14 @@
+#hxlinput{
+    width:100%;
+    height:280px;
+}
+
+.spacer10px{
+    margin-top:10px;
+}
+
+.legendbox{
+    width:10px;
+    height:10px;
+    display:inline-block;
+}

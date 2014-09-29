@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HXL-Lat-Lng-Mapper</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/hxl_mapper.css"/>
+        <link rel="stylesheet" href="css/leaflet.css" />
+        <script src="js/jquery.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <script src="js/papaparse.js"></script>
+        <script src="demo_data/demo_data.js"></script>  
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1>HXL Lat Long Mapper</h1>
+            </div>
+            <div id="tab1" class="row">
+                <p>1) Choose a title for your map</p>
+                <p>2) Cut and paste HXL tagged data below. Human readable headings are assumed to be the
+                    row above the HXL tags.
+                </p>
+                <p>Or press this button to insert demo data <button id="loaddata">Load demo data</button></p>
+                <h4>Title</h4>
+                <input id="title" type="text" name="title">
+                <h4>HXL tagged data</h4>
+                <p>Human readable columns are assumed to the row above the HXL tags</p>
+                <div id="input" class="col-xs-12 spacer10px">
+                    <textarea id="hxlinput"></textarea>
+                </div>
+                <button id="submit" class="spacer10px">Submit</button>
+            </div>
+            <div id="tab2" class="row">
+                <div id="map" class="col-md-9">
+                </div>
+                <div id="legend" class="col-md-3">
+                    <h3 id="map_title"></h3>
+                    <div id="filter_dropdown"></div>
+                    <div id="legendtext"></div>
+                </div>
+            </div>
+        </div>
+        <script src="js/hxl_mapper.js"></script>   
+    </body>
+</html>
